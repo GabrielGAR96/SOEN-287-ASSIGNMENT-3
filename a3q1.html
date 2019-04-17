@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Question 1</title>
+	<script type="text/javascript" src="a3q1.js"></script>
+</head>
+<body>
+	<h1>Assignment 3 Question 1</h1>
+
+	<label>Search in this text:</label><br>
+	<textarea id="myTextArea" rows="10" cols="80"></textarea>
+<table>
+	<tr>
+		<td><label>Split the text according to these characters: </label></td>
+		<td><input type="text" size="20" id="split"></td></tr>
+	<tr>
+		<td><label>Test each word with this regex: </label></td>
+		<td><input type="text" size="20" id="test"></td></tr>
+	<tr>
+		<td><label>Modifiers for the regex: </label></td>
+		<td><input type="text" size="5" id="modifier"></td>
+	</tr>
+</table>
+<input type="button" value = "Search" id="search" onclick="search()">
+<input type="button" value = "Reset" id="reset">
+
+<p id="result"></p>
+
+</body>
+</html>

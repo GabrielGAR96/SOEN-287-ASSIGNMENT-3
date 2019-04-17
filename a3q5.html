@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Registration </title>
+	<style type="text/css">
+		body {background-color: #66ff99}
+		.aquabackground 
+					{color: #FF0000;
+					border-style: solid;
+					border-color: red;
+					border-width: 1px;
+
+					background-color: aqua}
+		.orangebackground
+					 {color: #0000FF;
+					border-style: solid;
+					border-color: blue;
+					border-width: 1px;
+
+					background-color: orange}
+
+		.lightred {color: #FF6666;
+					
+}
+		.lightblue {color: #6666FF;
+					
+}
+		.header{font-size: 45px;}
+
+		.visible{visibility: visible;}
+		.hidden{visibility: hidden;}
+
+
+	</style>
+
+	<table>
+		<tr >
+			<th><a href="http://ihg.scene7.com/is/image/ihg/holiday-inn-the-colony-4629618286-4x3">
+			<img src="http://ihg.scene7.com/is/image/ihg/holiday-inn-the-colony-4629618286-4x3" alt="hotel" width="200" height="150">
+		</a></th>
+		<th class="header"> Hotel Reservation Form</th>
+		</tr>
+	</table>
+	
+
+
+
+	<fieldset class="aquabackground"> 
+	<legend>Reservation information</legend>
+		<label class="lightred"><b>Number of Rooms: </b> </label>
+	<input type= "number" name="number">
+
+	<p>
+		<form>
+		<label class="lightred"> <b>Smoker?</b>  </label>
+
+	<label> Yes </label><input type="radio" name="Yes">
+	<label> No </label><input type="radio" name="Yes">
+	</form>
+
+	<p>
+		<label class="lightred"><b>Check-in date:</b></label>
+		<input type="date" name="chckin">
+	</p>
+
+	<p>
+		<label class="lightred"><b>Check-out date:</b></label>
+		<input type="date" name="chckout">
+	</p>
+	</fieldset>
+	
+	<fieldset class="orangebackground">
+	<legend>Room specifications</legend>
+
+	<label class="lightblue"><b>Room size:</b> </label>
+
+	<p>
+		<form>
+		<label>Small single:</label>
+		<input type="checkbox" name="checkbox">
+		<label>Regular single:</label>
+		<input type="checkbox" name="checkbox">
+		<label>Regular double:</label>
+		<input type="checkbox" name="checkbox">
+		<label>Large single:</label>
+		<input type="checkbox" name="checkbox">
+		<label>Large double:</label>
+		<input type="checkbox" name="checkbox">
+		</form>
+
+
+	<label class="lightblue"><b>Location: </b></label>
+	<p>
+		<form>
+		<label>Downtown:</label>
+		<input type="checkbox" name="checkbox" id="downtown" onclick="verifySearch()">
+		<label>NDG:</label>
+		<input type="checkbox" name="checkbox">
+		<label>Le Plateau:</label>
+		<input type="checkbox" name="checkbox">
+		<label>Old Montreal</label>
+		<input type="checkbox" name="checkbox">
+		<label> Little Italy:</label>
+		<input type="checkbox" name="checkbox">
+		<label>West Island:</label>
+		<input type="checkbox" name="checkbox">
+		</form>
+
+
+	<p>
+		<label class="lightblue"><b>Price Range:</b></label>
+			<select name="price" onchange="verifySearch()">
+				<option id="fifty">50</option>
+				<option >200</option>
+				<option >500</option>
+				<option >No price limit</option>
+			</select>
+	</p>
+
+	<p>
+		<label class="lightblue"><b>Required parking number:</b></label>
+			<select name="price">
+				<option>0</option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+			</select>
+	</p>
+
+	
+	<p>
+		<label class="lightblue"><b>Facilities: </b></label>
+		<form>
+		<label>Pool:</label>
+		<input type="checkbox" name="checkbox">
+		<label>Gym:</label>
+		<input type="checkbox" name="checkbox">
+		<label>Bar:</label>
+		<input type="checkbox" name="checkbox">
+		<label>Spa:</label>
+		<input type="checkbox" name="checkbox">
+		<label>Restaurant:</label>
+		<input type="checkbox" name="checkbox">
+		<label>Massage:</label>
+		<input type="checkbox" name="checkbox">
+		</form>
+	
+
+
+	
+	</fieldset>
+	<fieldset id="eSuggestions" class="hidden">
+	<legend>Expert Suggestions</legend>
+	<label><b>It is very difficult to find a hotel room in this price range at Downtown</b></label>
+	</fieldset>
+
+	<form action="form">
+		<input type="submit" name="submit" id="submit">
+		<input type="reset" name="reset">
+	</form>
+
+	<script type="text/javascript">
+		function verifySearch() {
+			// body...
+			var dt = document.getElementById("downtown").checked;
+			var fifty = document.getElementById("fifty").selected;
+			if(dt && fifty){
+			document.getElementById("eSuggestions").className = "visible";
+			}else document.getElementById("eSuggestions").className = "hidden";
+		}
+		
+	</script>
+
+</body>
+</html>

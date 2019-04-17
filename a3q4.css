@@ -1,0 +1,15 @@
+.textColor{
+	color: MediumBlue;
+}
+
+.backgroundColor{
+	padding: 10px;
+	background-color: DarkOrange;
+	max-width: 540px;
+}
+
+.border{
+	border: 3px solid;
+	max-width: 540px;
+
+}
